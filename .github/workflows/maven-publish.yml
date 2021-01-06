@@ -61,6 +61,6 @@ jobs:
         path: staging
     - run: ls staging 
     - name: Publish to GitHub Packages Apache Maven
-      run: mvn --batch-mode org.apache.maven.plugins:maven-deploy-plugin:3.0.0-M1:deploy-file -Dfile=staging/spring-boot-hello-world-0.0.2-SNAPSHOT.jar -Durl=https://maven.pkg.github.com/sawantp02/spring-boot-hello-world -DrepositoryId=spring-boot-hello-world
+      run: mvn --batch-mode org.apache.maven.plugins:maven-deploy-plugin:3.0.0-M1:deploy-file -Dfile=staging/spring-boot-hello-world-0.0.2-SNAPSHOT.jar -Durl=https://maven.pkg.github.com/sawantp02/spring-boot-hello-world -DrepositoryId=spring-boot-hello-world -s $GITHUB_WORKSPACE/settings.xml
       env:
         GITHUB_TOKEN: ${{ github.token }}
