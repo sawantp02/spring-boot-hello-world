@@ -53,7 +53,7 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-maven-
     - name: Download Build Artifacts
-      uses: actions/download-artifact@v2
+      uses: actions/download-artifact@v4.1.7
       with:
         # Artifact name
         name: library-jar-files.zip
